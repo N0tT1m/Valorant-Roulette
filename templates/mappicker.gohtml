@@ -1,0 +1,22 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{.title}} - Valorant Roulette</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/css/site.css" type="text/css" />
+</head>
+
+{{template "templates/nav" .}}
+<h1>{{.title}}</h1>
+
+<div class="container" id="mapPicker" style="display:none">
+    <img src="~/maps/bind.webp" alt="rotating image" width="400" height="300" id="rotator">
+</div>
+
+<div class="container">
+    <br />
+    <button id="selectMap" onclick="ShowHideDiv(); start();">Pick a map</button>
+</div>
+
+<script src="/js/mapPicker.js"></script>
+{{template "templates/footer" .}}
